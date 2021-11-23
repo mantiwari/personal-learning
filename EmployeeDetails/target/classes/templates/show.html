@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title><c:forEach> Tag Example</title>
+</head>
+
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Current Project</th>
+        <th>Contact</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tr th:each="user : ${list}">
+        <td class="align-middle" th:text="${user.name}"></td>
+        <td class="align-middle" th:text="${user.role}"></td>
+        <td class="align-middle" th:text="${user.current_project}"></td>
+        <td class="align-middle" th:text="${user.contact}"></td>
+    </tr>
+</table>
+</body>
+</html>
